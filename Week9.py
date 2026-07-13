@@ -98,3 +98,32 @@ print(df["Score"].mean())
 
 #Handling Missing Data
 
+
+Data={
+    "Name":["Alex","Jordan","Sam"],
+    "Score":[85,np.nan,92]
+}
+df=pd.DataFrame(Data)
+print(df)
+print(df.isna())
+df.Score=df.Score.fillna(df.Score.mean())
+print(df)
+
+df_clean=df.dropna()
+print(df)
+
+DAta={
+    "team":["A","A","B","B"],
+    "score":[10,20,30,40]
+}
+df=pd.DataFrame(DAta)
+print(df.groupby("team")["score"].prod())
+
+data = {
+    "student": ["A", "B", "C", "D"],
+    "class": ["Math", "Math", "Science", "Science"],
+    "marks": [70, 90, 60, 80]
+}
+df = pd.DataFrame(data)
+print(df.groupby("class")["marks"].mean())
+
