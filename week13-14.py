@@ -90,3 +90,23 @@ model = LogisticRegression()
 model.fit(X, y)
 
 print(model.predict([[5]]))
+
+
+#5
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+data = {
+    "temp": [___],
+    "sold": [___]
+}
+df = pd.DataFrame(data)
+
+X = ___
+y = ___
+
+model = ___
+model.___(X, y)
+
+prediction = model.predict([[___]])
+print(prediction)
